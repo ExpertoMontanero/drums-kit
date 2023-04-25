@@ -7,18 +7,15 @@ document.querySelector(".set .j").style.backgroundImage = "url('images/snare.png
 document.querySelector(".set .k").style.backgroundImage = "url('images/crash.png')";
 document.querySelector(".set .l").style.backgroundImage = "url('images/kick.png')";
 
-//adding proper sounds
+//adding proper sounds on click
 function playAudio(url) {
     new Audio(url).play();
 }
-//   function playAudioOnClick(url){
-//     new Audio(url).play();
-//   }
-
+//ading proper sounds on key down
 const input = document.querySelector(".body");
 input.addEventListener("keydown", playAudioOnKeyClick);
-function playAudioOnKeyClick(e) {
-    switch (e.which) {
+function playAudioOnKeyClick(key) {
+    switch (key.which) {
         case 87:
             new Audio('sounds/tom-1.mp3').play();
             break;
